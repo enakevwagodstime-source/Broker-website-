@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Crypto Broker Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1>Global Crypto Broker</h1>
+    <nav>
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Register</button>
+    </nav>
+  </header>
+
+  <!-- Crypto Ticker -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>BTC/USD $29,450 ▲</span>
+      <span>ETH/USD $1,850 ▼</span>
+      <span>XRP/USD $0.72 ▲</span>
+      <span>LTC/USD $95 ▲</span>
+    </div>
+  </div>
+
+  <!-- TradingView Widget -->
+  <section class="tradingview-widget">
+    <iframe src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview-widget"
+      style="width:100%;height:400px;border:0;"
+      allowtransparency="true" scrolling="no"></iframe>
+  </section>
+
+  <!-- Profile & Dashboard -->
+  <section id="dashboard" class="hidden">
+    <div class="profile-card">
+      <h2>Welcome, <span id="userName">Trader</span></h2>
+      <p>Deposit Balance: <strong>$0.00</strong></p>
+      <button id="withdrawBtn">Withdraw</button>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Global Crypto Broker is your trusted platform for cryptocurrency investments and trading worldwide.
+    </p>
+  </section>
+
+  <!-- Chatbox -->
+  <div id="chatIcon">💬</div>
+  <div id="chatBox" class="hidden">
+    <h3>Customer Care</h3>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="tel" placeholder="Phone">
+    <button>Start Chat</button>
+    <button id="closeChat">Close</button>
+  </div>
+
+  <!-- Modals -->
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Login</button>
+      <button id="closeLogin">Close</button>
+    </div>
+  </div>
+
+  <div id="registerModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Register</h2>
+      <input type="text" placeholder="Name">
+      <input type="text" placeholder="Username">
+      <input type="email" placeholder="Email">
+      <input type="tel" placeholder="Phone Number">
+      <input type="text" placeholder="Country">
+      <input type="text" placeholder="Currency">
+      <input type="password" placeholder="Password">
+      <input type="password" placeholder="Confirm Password">
+      <button>Register</button>
+      <button id="closeRegister">Close</button>
+    </div>
+  </div>
+
+  <!-- Withdrawal Page -->
+  <div id="withdrawPage" class="modal hidden">
+    <div class="modal-content">
+      <h2>Withdrawal Options</h2>
+      <button class="withdraw-option" data-method="btc">Bitcoin Wallet</button>
+      <button class="withdraw-option" data-method="cashapp">Cash App</button>
+      <button class="withdraw-option" data-method="paypal">PayPal</button>
+      <button class="withdraw-option" data-method="gpay">Google Pay</button>
+      <button class="withdraw-option" data-method="bank">Bank Transfer</button>
+      <button id="closeWithdraw">Close</button>
+    </div>
+  </div>
+
+  <!-- Bank Transfer Form -->
+  <div id="bankTransferPage" class="modal hidden">
+    <div class="modal-content">
+      <h2>Bank Transfer</h2>
+      <input type="text" placeholder="Holder's Name">
+      <input type="text" placeholder="Account Number">
+      <input type="text" placeholder="Bank Name">
+      <button>Transfer</button>
+      <button id="closeBankTransfer">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
