@@ -1,0 +1,124 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0d1117;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #161b22;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  color: #f0b90b;
+}
+
+.navbar button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #f0b90b;
+  color: #0d1117;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Ticker */
+.ticker {
+  background: #111;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.5rem;
+}
+.ticker-inner {
+  display: inline-block;
+  animation: scroll 10s linear infinite;
+}
+.ticker span {
+  margin-right: 2rem;
+}
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* Profile Card */
+.profile-card {
+  background: #161b22;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* About */
+#about {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Chatbox */
+#chatIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #f0b90b;
+  color: #0d1117;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#chatBox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #161b22;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 250px;
+}
+#chatBox input, #chatBox button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: #161b22;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+}
+.modal-content input, .modal-content button {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.hidden {
+  display: none;
+}
